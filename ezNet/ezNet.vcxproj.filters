@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Common\Public\Defines.h" />
+    <ClInclude Include="Common\Public\Types.h" />
+    <ClInclude Include="Data\Container\Public\TArray.h" />
+    <ClInclude Include="Data\Time\Public\DateTime.h" />
+    <ClInclude Include="Data\Time\Public\TimeSpan.h" />
+    <ClInclude Include="DataController\Queue\Public\ObjectQueue.h" />
+    <ClInclude Include="Network\Public\ISocket.h" />
+    <ClInclude Include="Network\Public\NetworkStats.h" />
+    <ClInclude Include="Network\Public\SocketFactory.h" />
+    <ClInclude Include="Serialization\Public\StreamSerializer.h" />
+    <ClInclude Include="Stream\Public\IStream.h" />
+    <ClInclude Include="Stream\Public\MemoryStream.h" />
+    <ClInclude Include="Stream\Public\NetworkStream.h" />
+    <ClInclude Include="Common\Public\Assert.h" />
+    <ClInclude Include="Network\Public\Socket.h" />
+    <ClInclude Include="Network\Public\NetworkModuleBaseIncludes.h" />
+    <ClInclude Include="Network\Public\NetworkModule.h" />
+    <ClInclude Include="DataController\Time\Public\Time.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Data\Time\Private\DateTime.cpp" />
+    <ClCompile Include="Data\Time\Private\TimeSpan.cpp" />
+    <ClCompile Include="Network\Private\SocketFactory.cpp" />
+    <ClCompile Include="Serialization\Private\StreamSerializer.cpp" />
+    <ClCompile Include="Stream\Private\MemoryStream.cpp" />
+    <ClCompile Include="Stream\Private\NetworkStream.cpp" />
+    <ClCompile Include="DataController\Time\Private\Time.cpp" />
+    <ClCompile Include="Network\Private\Socket.cpp" />
+  </ItemGroup>
+</Project>
