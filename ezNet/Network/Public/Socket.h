@@ -9,7 +9,7 @@ EZNET_BEGIN
 class Socket;
 
 /*
-* The standart BarberNet implementation of the ISocket interface.
+* The standart implementation of the ISocket interface.
 */
 class Socket : public ISocket {
 
