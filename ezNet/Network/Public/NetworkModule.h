@@ -7,7 +7,7 @@
 
 EZNET_BEGIN
 
-namespace BNNetwork {
+namespace EzNet {
 
   /*
   * Initialize WinSock lib.
