@@ -9,7 +9,7 @@ EZNET_BEGIN
 class StreamSerializer;
 
 /*
-* Class with static methods to serialize primitive data into byte streams.
+* Class with static methods to serialize/deserialize primitive data into/from byte streams.
 */
 class StreamSerializer {
 
