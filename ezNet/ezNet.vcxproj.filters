@@ -19,6 +19,8 @@
     <ClInclude Include="Network\Public\NetworkModuleBaseIncludes.h" />
     <ClInclude Include="Network\Public\NetworkModule.h" />
     <ClInclude Include="DataController\Time\Public\Time.h" />
+    <ClInclude Include="Compression\Public\ZipStream.h" />
+    <ClInclude Include="ThirdParty\FastLZ\fastlz.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data\Time\Private\DateTime.cpp" />
@@ -29,5 +31,13 @@
     <ClCompile Include="Stream\Private\NetworkStream.cpp" />
     <ClCompile Include="DataController\Time\Private\Time.cpp" />
     <ClCompile Include="Network\Private\Socket.cpp" />
+    <ClCompile Include="Compression\Private\ZipStream.cpp" />
+    <ClCompile Include="ThirdParty\FastLZ\fastlz.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ThirdParty\FastLZ\LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ThirdParty\FastLZ\README.TXT" />
   </ItemGroup>
 </Project>

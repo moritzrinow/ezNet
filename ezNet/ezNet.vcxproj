@@ -122,6 +122,7 @@
     <ClInclude Include="Common\Public\Assert.h" />
     <ClInclude Include="Common\Public\Defines.h" />
     <ClInclude Include="Common\Public\Types.h" />
+    <ClInclude Include="Compression\Public\ZipStream.h" />
     <ClInclude Include="DataController\Queue\Public\ObjectQueue.h" />
     <ClInclude Include="DataController\Time\Public\Time.h" />
     <ClInclude Include="Data\Container\Public\TArray.h" />
@@ -137,8 +138,10 @@
     <ClInclude Include="Stream\Public\IStream.h" />
     <ClInclude Include="Stream\Public\MemoryStream.h" />
     <ClInclude Include="Stream\Public\NetworkStream.h" />
+    <ClInclude Include="ThirdParty\FastLZ\fastlz.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Compression\Private\ZipStream.cpp" />
     <ClCompile Include="DataController\Time\Private\Time.cpp" />
     <ClCompile Include="Data\Time\Private\DateTime.cpp" />
     <ClCompile Include="Data\Time\Private\TimeSpan.cpp" />
@@ -147,6 +150,13 @@
     <ClCompile Include="Serialization\Private\StreamSerializer.cpp" />
     <ClCompile Include="Stream\Private\MemoryStream.cpp" />
     <ClCompile Include="Stream\Private\NetworkStream.cpp" />
+    <ClCompile Include="ThirdParty\FastLZ\fastlz.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ThirdParty\FastLZ\LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ThirdParty\FastLZ\README.TXT" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
