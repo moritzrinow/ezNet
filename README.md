@@ -1,13 +1,13 @@
 # ezNet
 Small, modern C++ library for networking (sockets, serialization,...)
 
-###This library is still in development.
+### This library is still in development.
 
 I was working on some projects where all that stuff was written
 and I thought sharing it might be useful for somebody out there wrestling with
 native C sockets.
 
-###!!!ezNet is currently only compatible with Windows!!!
+### !!!ezNet is currently only compatible with Windows!!!
 
 ## What ezNet offers:
 
