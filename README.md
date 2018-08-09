@@ -16,7 +16,9 @@ native C sockets.
 of storages (MemoryStream - memory, NetworkStream - network, sockets).
 3. Serialization/deserialization of primitive data types to/from streams.
 4. Compressing/decompressing data streams.
-5. The ability for the user to add further functionality to the polymorphic structure.
+5. Object queue, that provides data sharing and communication between multiple threads.
+6. Some time functionalities like getting the current local time, comparing times and working with time spans.
+7. The ability for the user to add further functionality to the polymorphic structure.
 
 ## Notes
 
