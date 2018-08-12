@@ -39,7 +39,14 @@ ISocket* Socket::Accept()
 
 bool Socket::Close()
 {
-  bool closed = (closesocket(m_socket) == 0);
+  bool closed = false;
+
+#ifdef _WIN32
+  closed = (closesocket(m_socket) == 0);
+#else // Unix
+  closed = ::close(m_socket) == 0;
+#endif // _WIN32
+
   return closed;
 }
 
@@ -107,7 +114,17 @@ void Socket::SetAddress(NativeSockAddrIn * addr)
 void Socket::SetBlocking(bool shouldBlock)
 {
   ULONG mode = shouldBlock ? 0 : 1;
-  bool success = ioctlsocket(m_socket, FIONBIO, &mode) == 0;
+  bool success = false;
+
+#ifdef _WIN32
+  success = ioctlsocket(m_socket, FIONBIO, &mode) == 0;
+#else // Unix
+  int32 flags = fcntl(m_socket, F_GETFL, 0);
+  assert(flags != -1);
+  flags = shouldBlock ? (flags & ~O_NONBLOCK) : (flags | O_NONBLOCK);
+  success = fcntl(m_socket, F_SETFL, flags) == 0;
+#endif // _WIN32
+
   assert(success);
   m_blocking = shouldBlock;
 }

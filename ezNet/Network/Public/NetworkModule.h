@@ -9,6 +9,25 @@ EZNET_BEGIN
 
 namespace EzNet {
 
+  bool InitWSA();
+  void CleanupWSA();
+  int32 GetLastWSAError();
+
+  inline bool Init()
+  {
+#ifdef _WIN32
+    return InitWSA();
+#endif // _WIN32
+    return true;
+  }
+
+  inline void Shutdown()
+  {
+#ifdef _WIN32
+    CleanupWSA();
+#endif // _WIN32
+  }
+
   /*
   * Initialize WinSock lib.
   * Returns false on error / breaks in debug mode.
@@ -39,7 +58,11 @@ namespace EzNet {
   */
   inline int32 GetLastWSAError()
   {
+#ifdef _WIN32
     return WSAGetLastError();
+#else // Unix
+    return 0;
+#endif // _WIN32
   }
 }
 
