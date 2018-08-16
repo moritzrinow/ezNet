@@ -134,6 +134,7 @@
     <ClInclude Include="Network\Public\ISocket.h" />
     <ClInclude Include="Network\Public\NetworkStats.h" />
     <ClInclude Include="Network\Public\SocketFactory.h" />
+    <ClInclude Include="Serialization\Public\IStreamSerializable.h" />
     <ClInclude Include="Serialization\Public\StreamSerializer.h" />
     <ClInclude Include="Stream\Public\IStream.h" />
     <ClInclude Include="Stream\Public\MemoryStream.h" />

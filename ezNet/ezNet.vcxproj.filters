@@ -21,6 +21,7 @@
     <ClInclude Include="DataController\Time\Public\Time.h" />
     <ClInclude Include="Compression\Public\ZipStream.h" />
     <ClInclude Include="ThirdParty\FastLZ\fastlz.h" />
+    <ClInclude Include="Serialization\Public\IStreamSerializable.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data\Time\Private\DateTime.cpp" />
