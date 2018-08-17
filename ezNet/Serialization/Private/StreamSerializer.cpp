@@ -106,7 +106,26 @@ void StreamSerializer::WriteString(IStream * stream, char * inValue, int32 size)
 
 bool StreamSerializer::ReadString(IStream * stream, char * outValue, int32 size)
 {
-  return (stream->Read((byte*)outValue, 0, size) == size);
+  if (size <= 0) {
+    return false;
+  }
+
+  *outValue = '\0';
+
+  for (int i = 0; i < size; i++) {
+    int32 current = stream->ReadByte();
+    if (current < 0) { // No bytes left
+      break;
+    }
+
+    char value = (char)current;
+    outValue[i] = value;
+    if (value == '\0') { // End of string
+      return true;
+    }
+  }
+
+  return false; // There were not enough bytes in the stream to build a valid string
 }
 
 EZNET_END

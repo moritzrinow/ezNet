@@ -1,3 +1,5 @@
+// Copyright (c) 2018 - 2018, Moritz Rinow. All rights reserved.
+
 #pragma once
 
 #include "Common/Public/Defines.h"
